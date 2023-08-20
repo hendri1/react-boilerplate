@@ -1,5 +1,9 @@
-name: CI
-on: [push]
+name: React Boilerplate CI
+
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -17,10 +21,12 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install
+
       - name: Run prettier
         uses: borales/actions-yarn@v4
         with:
-          cmd: prettier:check && prettier write
+          cmd: prettier
+
       - name: Run lint
         uses: borales/actions-yarn@v4
         with:

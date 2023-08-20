@@ -9,8 +9,7 @@
     "commit": "commit",
     "husky:prepare": "husky install",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "prettier:check": "prettier . --check",
-    "prettier:write": "prettier . --write",
+    "prettier": "prettier . --check && prettier . --write",
     "preview": "vite preview"
   },
   "dependencies": {
